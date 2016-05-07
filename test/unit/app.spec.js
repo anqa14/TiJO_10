@@ -9,10 +9,10 @@ describe('app', function () {
                 name: 'Jack', age: 20, course: 'adults'
             });
             expect(app.assignToSwimmingCourse('Maria', '11/10/1997')).toEqual({
-                name: "Maria", age: 18, course: 'adults'
+                name: 'Maria', age: 18, course: 'adults'
             });
         });
-        xit('should assign person between the ages of 12 - 17 to teens group', function () {
+        it('should assign person between the ages of 12 - 17 to teens group', function () {
             expect(app.assignToSwimmingCourse('John', '07/10/2001')).toEqual({
                 name: 'John', age: 14, course: 'teens'
             });
@@ -20,13 +20,10 @@ describe('app', function () {
                 name: 'Bella', age: 13, course: 'teens'
             });
         });
-        iit('should assign person below 12 to kids group', function () {
+        it('should assign person below 12 to kids group', function () {
             expect(app.assignToSwimmingCourse('Zack', '10/06/2010')).toEqual({
                 name: 'Zack', age: 5, course: 'kids'
             });
-        });
-        it('should should...', function () {
-
         });
     });
 });

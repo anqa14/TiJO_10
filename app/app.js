@@ -5,7 +5,6 @@
         assignToSwimmingCourse: function (name, birthDate) {
             var course;
             var age = this.calculateAge(birthDate);
-            console.log(name);
             if (age >= 3 && age <= 12) {
                 course = {name: name, age: age, course: 'kids'};
             }
@@ -21,12 +20,11 @@
             return course;
         },
         calculateAge: function (dateString) {
-            console.log(dateString);
             var today = new Date();
             var birthDate = new Date(dateString);
             var age = today.getFullYear() - birthDate.getFullYear();
             var m = today.getMonth() - birthDate.getMonth();
-            if (m < 0 || (m == 0 && today.getDate() < birthDate.getDate())) {
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
                 age--;
             }
             return age;
